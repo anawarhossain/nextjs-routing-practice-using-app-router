@@ -81,6 +81,14 @@ export default function Navbar() {
               Products
             </Link>
           </li>
+          <li>
+            <Link
+              href="/search"
+              className={`${pathName === "/search" ? "font-medium text-accent" : ""}`}
+            >
+              Search
+            </Link>
+          </li>
         </ul>
         <div className="hidden items-center gap-4 md:flex">
           <Link
