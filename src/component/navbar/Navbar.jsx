@@ -1,10 +1,10 @@
-'use client'
+"use client";
 import { useState } from "react";
 import { Link, Button } from "@heroui/react";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-    const pathName = usePathname();
+  const pathName = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -89,7 +89,12 @@ export default function Navbar() {
           >
             Login
           </Link>
-          <Button>Sign Up</Button>
+          <Link
+            href="/register"
+            className={`${pathName === "/register" ? "font-medium text-accent" : ""}`}
+          >
+            Sign Up
+          </Link>
         </div>
       </header>
       {isMenuOpen && (
